@@ -1,13 +1,19 @@
-import { useState } from 'react'
-import './App.css'
-import { Layout } from './components/Layout'
+import styled from "styled-components";
+import { Layout } from './components/Layout';
+
+const Box = styled.div`
+  background-color: orange;
+  border-radius: 25px;
+  padding-left: 15px;
+`
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <Layout>
-      <h1>Login here</h1>
+      <Box>
+        <h1>Login here</h1>
+      </Box>
       <label htmlFor="emailInput">
         Email
       </label>

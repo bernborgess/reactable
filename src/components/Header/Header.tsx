@@ -1,11 +1,11 @@
+import './Header.css'
 
 type Props = {}
 
 export function Header({ }: Props) {
   return (
-    <div>
-      Header
-      Menu
+    <div className='header'>
+      Dio Bank
     </div>
   )
 }
