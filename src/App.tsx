@@ -3,7 +3,7 @@ import {
 } from "@chakra-ui/react";
 import { Form } from "./components/Form";
 import { Header } from "./components/Header/Header";
-import { login } from "./services/login";
+import { welcomelogin } from "./services/welcomelogin";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Header />
         <Form
           title="Please login to your bank"
-          onClick={login}
+          onClick={welcomelogin}
           submitLabel="Login"
         />
 
