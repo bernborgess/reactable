@@ -1,11 +1,11 @@
-import './Header.css'
+import { Container } from './styles'
 
 type Props = {}
 
 export function Header({ }: Props) {
   return (
-    <div className='header'>
-      Dio Bank
-    </div>
+    <Container>
+      <h1>Dio Bank</h1>
+    </Container>
   )
 }

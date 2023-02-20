@@ -1,8 +1,8 @@
-import { Button } from "@chakra-ui/button";
 import {
-  Box, Center, ChakraProvider,
-  Input
+  Box, ChakraProvider
 } from "@chakra-ui/react";
+import { Form } from "./components/Form";
+import { Header } from "./components/Header/Header";
 import { login } from "./services/login";
 
 function App() {
@@ -10,31 +10,16 @@ function App() {
     <ChakraProvider>
       <Box
         minHeight='100vh'
-        backgroundColor='#9413dc'
+        backgroundColor='lightBlue'
         padding='5px'
       >
-        <Box
-          backgroundColor='#FFF'
-          borderRadius='25px'
-          padding='15px'
-        >
-          <Center>
-            <h1>Do your login</h1>
-          </Center>
-          <Input placeholder="email" />
-          <Input placeholder="password" type="password" />
-          <Center>
-            <Button
-              onClick={login}
-              colorScheme='teal'
-              size='sm'
-              width='100%'
-              marginTop='5px'
-            >
-              Press
-            </Button>
-          </Center>
-        </Box>
+        <Header />
+        <Form
+          title="Please login to your bank"
+          onClick={login}
+          submitLabel="Login"
+        />
+
       </Box>
     </ChakraProvider>
   )
