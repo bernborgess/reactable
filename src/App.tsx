@@ -1,32 +1,40 @@
-import styled from "styled-components";
-import { Layout } from './components/Layout';
-
-const Box = styled.div`
-  background-color: orange;
-  border-radius: 25px;
-  padding-left: 15px;
-`
+import { Button } from "@chakra-ui/button";
+import {
+  Box, Center, ChakraProvider,
+  Input
+} from "@chakra-ui/react";
 
 function App() {
-
   return (
-    <Layout>
-      <Box>
-        <h1>Login here</h1>
+    <ChakraProvider>
+      <Box
+        minHeight='100vh'
+        backgroundColor='#9413dc'
+        padding='5px'
+      >
+        <Box
+          backgroundColor='#FFF'
+          borderRadius='25px'
+          padding='15px'
+        >
+          <Center>
+            <h1>Do your login</h1>
+          </Center>
+          <Input placeholder="email" />
+          <Input placeholder="password" type="password" />
+          <Center>
+            <Button
+              colorScheme='teal'
+              size='sm'
+              width='100%'
+              marginTop='5px'
+            >
+              Press
+            </Button>
+          </Center>
+        </Box>
       </Box>
-      <label htmlFor="emailInput">
-        Email
-      </label>
-      <input id='emailInput' type='email' />
-
-      <label htmlFor='passwordInput'>
-        Pass
-      </label>
-      <input id='passwordInput' type='password' />
-      <button>
-        Enter
-      </button>
-    </Layout>
+    </ChakraProvider>
   )
 }
 
